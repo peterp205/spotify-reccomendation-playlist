@@ -21,12 +21,9 @@ code {
 }
 
 /* Global styling */
-
-.app{
-  background-image: url(./images/Background-image.jpg);
-  background-size: cover;
+.no-display{
+  display: none;
 }
-
 /*
 .app::before {
   content: "";
@@ -49,39 +46,17 @@ code {
 
 
 /* layout styling*/
-main{
-    margin: 0 auto;
-    padding: 2rem;
-}
+
 
 /* Search bar styling */
 
 
 /* Flex styling for layout of main section */
-header.app-header{
-  text-align: center;
-  padding: 2rem;
-}
 
-section#search-bar{
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-
-#spotify-lists {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-}
 
 /* Header */
 
-.title{
-  font-size: 3rem;
-  font-weight: 600;
-}
+
 
 /* Search results styles */
 
