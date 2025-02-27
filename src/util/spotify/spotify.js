@@ -33,6 +33,11 @@ const Spotify = {
     search(term) {
         return this.getAccessToken()
             .then(token => {
+                if (!token) {
+                    // If we don't have a token, we're probably in the process of getting one.
+                    // We'll return a special value to indicate this.
+                    return 'REDIRECTING';
+                }
                 return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
                     method: "GET",
                     headers: {
@@ -40,7 +45,14 @@ const Spotify = {
                     },
                 });
             })
-            .then(response => response.json())
+            .then(response => {
+                if (response === 'REDIRECTING') {
+                    // If we're redirecting, we'll return an empty array
+                    // The component can handle this case appropriately
+                    return [];
+                }
+                return response.json();
+            })
             .then(jsonResponse => {
                 if (!jsonResponse.tracks) {
                     return [];
