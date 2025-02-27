@@ -1,5 +1,5 @@
 const clientID = 'b4df99ea8ceb4d0eb6e789deed6790ae';
-const redirectURL = 'http://localhost:3000/';
+const redirectURL = 'https://peterjammingproject.surge.sh';
 let accessToken;
 
 
