@@ -14,7 +14,7 @@ function SearchBar (props) {
 
   return (
        <form name="searchBar" id="searchBar" className={styles.SearchBar} onSubmit={passTerm}>
-         <label for="searchBarInput" className="no-display">Searchbar</label>
+         <label htmlFor="searchBarInput" className="no-display">Searchbar</label>
          <input
           placeholder="Enter A Song, Album, or Artist"
           onChange={handleTermChange}
