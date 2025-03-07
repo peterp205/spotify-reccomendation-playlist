@@ -17,12 +17,9 @@ import {Spotify} from "../../util/spotify/spotify";
   // Add a track to the playlist
   function addTrack(track) {
     const exsitingTrack = playlistTracks.find(t => t.id === track.id);
-    //const newTrack = playlistTracks.concat(track);
     if(!exsitingTrack){
       setPlaylistTracks(prevTracks => [...prevTracks, track]);
-      //console.log('You have already added this track')
     } else {
-      //setPlaylistTracks(newTrack);
       console.log('You have already added this track')
     };
   };
